@@ -1,118 +1,109 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <!--- ========================================================= ----
-        Name of Project:  Tumbletech Main Website
-        Date:             April 8, 2025
-        Project ID:       00-0000
-  ----- ========================================================= --->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tumbletech</title>
-  <link rel="icon" type="image/png" href="/assets/img/002.favicon.png">
-  <link href="./main.css" rel="stylesheet">
-  <style>
-    @keyframes pop {
-      from {
-        transform: scale(0);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
+  <head>
+    <!--- ========================================================= ----
+          Name of Project:  Tumbletech Main Website
+          Date:             April 8, 2025
+          Project ID:       00-0000
+    ----- ========================================================= --->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumbletech</title>
+    <link rel="icon" type="image/png" href="/assets/img/002.favicon.png">
+    <link href="./main.css" rel="stylesheet">
+    <style>
+      body {
+      background: black;
+      color: #00fefb;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    @keyframes orbit {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+    nav {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .animate-pop-center {
-      animation: pop 0.6s ease-out forwards;
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #00fefb;
+      font-weight: 500;
     }
-    .animate-orbit {
-      animation: orbit 0.6s ease-out forwards;
+    .landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 90vh;
+      text-align: center;
     }
-    .animate-orbit.delay-100 {animation-delay: 0.1s;}
-    .animate-orbit.delay-200 {animation-delay: 0.2s;}
-    .animate-orbit.delay-300 {animation-delay: 0.3s;}
-    .animate-orbit.delay-400 {animation-delay: 0.4s;}
-    .animate-orbit.delay-500 {animation-delay: 0.5s;}
-
-    .circle-frame {
-      border-radius: 9999px;
-      border: 3px solid #00fefb;
-      padding: 10px;
+    .logo {
+      width: 150px;
+      margin-bottom: 2rem;
     }
-
-    .orbit-line {
-      position: absolute;
-      width: 2px;
-      background-color: #00fefb;
-      transform-origin: bottom-center;
+    .scroll-text {
+      position: relative;
+      height: 3rem;
+      overflow: hidden;
+      font-size: 2rem;
+      font-weight: bold;
     }
-  </style>
-</head>
-<body class="bg-white text-gray-800 font-sans">
-  <!--- Navigation Bar --->
-  <nav class="flex justify-between items-center p-6 bg-black shadow-md sticky top-0 z-50">
-    <div class="flex items-center">
-      <img src="/assets/img/001.mainlogo-b.png" alt="Tumbletech-Logo" class="h-10 mr-3">
-    </div>
-    <ul class="flex space-x-6 font-medium">
-      <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Home</a></li>
-      <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Products</a></li>
-      <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Roadmap</a></li>
-      <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">About</a></li>
-      <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!---- Hero Section --->
-
-  <!--<header class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-900 to-indigo-900 text-white px-6 text-center">
-    <h1 class="text-5xl md:text-7xl font-bold mb-4">We Build Because the World Doesn't Wait.</h1>
-    <p class="text-lg md:text-xl max-w-2xl">Tumbletech builds powerful, no-nonsense SaaS tools. Build to empower. Built to launch.</p>
-  </header>-->
-
-  <!--- Services Orbit Section --->
-  <section id="services" class="relative min-h-screen bg-black flex items-center justify-center overflow-hidden">
-    <!--- Central Logo --->
-    <div class="absolute w-24 h-24 z-20 flex items-center justify-center animate-pop-center">
-      <img src="/assets/img/002.favicon.png" alt="Tumbletech-Logo" class="w-full h-full object-contain">
-    </div>
-
-    <!--- Orbit Icons with lines and circular frames --->
-    <div class="absolute w-full h-full flex items-center justify-center">
-      <div class="relative w-[500px] h-[500px]">
-      
-        <!--- Orbit Lines --->
-        <div class="orbit-line" style="height: 120px; left: 50%; top: 0; transform: translateX(-50%) rotate(0deg);"></div>
-        <div class="orbit-line" style="height: 120px; left: 85%; top: 15%; transform: rotate(45deg);"></div>
-        <div class="orbit-line" style="height: 120px; left: 85%; top: 50%; transform: rotate(-45deg);"></div>
-        <div class="orbit-line" style="height: 120px; left: 50%; bottom: 0; transform: translateX(-50%) rotate(180deg);"></div>
-        <div class="orbit-line" style="height: 120px; left: 15%; bottom: 15%; transform: rotate(-135deg);"></div>
-        <div class="orbit-line" style="height: 120px; left: 15%; top: 15%; transform: rotate(135deg);"></div>
-
-        <!--- Orbit Icons --->
-        <div class="absolute w-20 h-20 left-1/2 top-0 -translate-x-1/2 animate-orbit">
-          <div class="circle-frame">
-            <img src="/assets/img/003.service01.png" alt="Service 1" class="hover:scale-110 transition-transform duration-300">
-          </div>
-        </div>
-        <div class="absolute w-20 h-20 left-[85%] top-[15%] -translate-x-1/2 animate-orbit">
-          <div class="circle-frame">
-            <img src="/assets/img/003.service02.png" alt="Service 2" class="hover:scale-110 transition-transform duration-300">
-          </div>
-        </div>
-      
+    .scroll-text span {
+      display: block;
+      animation: scroll 12s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateY(0%); }
+      16.66% { transform: translateY(-100%); }
+      33.32% { transform: translateY(-200%); }
+      49.98% { transform: translateY(-300%); }
+      66.64% { transform: translateY(-400%); }
+      83.30% { transform: translateY(-500%); }
+      100% { transform: translateY(0%); }
+    }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!--- Navigation Bar --->
+    <nav class="flex justify-between items-center p-6 bg-black shadow-md sticky top-0 z-50">
+      <div class="flex items-center">
+        <img src="/assets/img/001.mainlogo-b.png" alt="Tumbletech-Logo" class="h-10 mr-3">
       </div>
-    </div>
-  </section>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Home</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Products</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Roadmap</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">About</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Contact</a></li>
+      </ul>
+    </nav>
 
-</body>
+    <!---- Hero Section --->
+
+    <!--<header class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-900 to-indigo-900 text-white px-6 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">We Build Because the World Doesn't Wait.</h1>
+      <p class="text-lg md:text-xl max-w-2xl">Tumbletech builds powerful, no-nonsense SaaS tools. Build to empower. Built to launch.</p>
+    </header>-->
+
+    <!--- Services Orbit Section --->
+    <section class="landing">
+      <img src="/assets/img/002.favicon.png" alt="Tumbletech Logo" class="logo">
+      <!-- Scrolling Text -->
+      <div class="relative h-12 overflow-hidden w-80 text-center">
+        <div class="carousel-track text-5xl font-semibold">
+          <span class="carousel-item">Website & App Development</span>
+          <span class="carousel-item">AI Agents Building</span>
+          <span class="carousel-item">Infrastructure as a Business</span>
+          <span class="carousel-item">Data Visualization & Dashboards</span>
+          <span class="carousel-item">Automation & Integration</span>
+          <span class="carousel-item">Custom Client Portals</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+

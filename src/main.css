@@ -211,6 +211,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-\[0\] {
+    top: 0;
+  }
   .top-\[15\%\] {
     top: 15%;
   }
@@ -225,6 +228,12 @@
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+  .bottom-\[0\] {
+    bottom: 0;
+  }
+  .bottom-\[15\%\] {
+    bottom: 15%;
   }
   .left-1 {
     left: calc(var(--spacing) * 1);
@@ -337,6 +346,9 @@
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-\[500px\] {
     height: 500px;
   }
@@ -363,6 +375,9 @@
   }
   .w-24 {
     width: calc(var(--spacing) * 24);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .w-\[500px\] {
     width: 500px;
@@ -723,6 +738,37 @@
       }
     }
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Carousel container */
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-vertical 12s steps(6) infinite;
+  }
+
+  .carousel-item {
+    height: 3rem; /* Matches the container height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Keyframes for vertical scroll */
+  @keyframes scroll-vertical {
+    0% { transform: translateY(0%); }
+    16.66% { transform: translateY(-100%); }
+    33.32% { transform: translateY(-200%); }
+    49.98% { transform: translateY(-300%); }
+    66.64% { transform: translateY(-400%); }
+    83.3% { transform: translateY(-500%); }
+    100% { transform: translateY(0%); }
+  }
+  
   .sm\:fixed {
     @media (width >= 40rem) {
       position: fixed;
