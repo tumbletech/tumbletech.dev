@@ -744,30 +744,50 @@
     padding: 0;
   }
   
-  /* Carousel container */
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .carousel-mask {
+    width: 500px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #00FFFF;
+    border-radius: 10px;
+  }
+  
   .carousel-track {
     display: flex;
     flex-direction: column;
-    animation: scroll-vertical 12s steps(6) infinite;
+    align-items: center;
+    animation: slideUp 50s infinite;
   }
-
+  
   .carousel-item {
-    height: 3rem; /* Matches the container height */
+    color: #00FFFF;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
   }
   
-  /* Keyframes for vertical scroll */
-  @keyframes scroll-vertical {
-    0% { transform: translateY(0%); }
-    16.66% { transform: translateY(-100%); }
-    33.32% { transform: translateY(-200%); }
-    49.98% { transform: translateY(-300%); }
-    66.64% { transform: translateY(-400%); }
-    83.3% { transform: translateY(-500%); }
-    100% { transform: translateY(0%); }
+  @keyframes slideUp {
+    0%, 10% { transform: translateY(0%); }
+    15%, 25% { transform: translateY(-100%); }
+    30%, 40% { transform: translateY(-200%); }
+    45%, 55% { transform: translateY(-300%); }
+    60%, 70% { transform: translateY(-400%); }
+    75%, 85% { transform: translateY(-500%); }
+    90%, 100% { transform: translateY(0%); }
   }
+  
   
   .sm\:fixed {
     @media (width >= 40rem) {

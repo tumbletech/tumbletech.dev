@@ -45,26 +45,7 @@
       width: 150px;
       margin-bottom: 2rem;
     }
-    .scroll-text {
-      position: relative;
-      height: 3rem;
-      overflow: hidden;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .scroll-text span {
-      display: block;
-      animation: scroll 12s linear infinite;
-    }
-    @keyframes scroll {
-      0% { transform: translateY(0%); }
-      16.66% { transform: translateY(-100%); }
-      33.32% { transform: translateY(-200%); }
-      49.98% { transform: translateY(-300%); }
-      66.64% { transform: translateY(-400%); }
-      83.30% { transform: translateY(-500%); }
-      100% { transform: translateY(0%); }
-    }
+    
     </style>
   </head>
   <body class="bg-white text-gray-800 font-sans">
@@ -93,17 +74,21 @@
     <section class="landing">
       <img src="/assets/img/002.favicon.png" alt="Tumbletech Logo" class="logo">
       <!-- Scrolling Text -->
-      <div class="relative h-12 overflow-hidden w-80 text-center">
-        <div class="carousel-track text-5xl font-semibold">
-          <span class="carousel-item">Website & App Development</span>
-          <span class="carousel-item">AI Agents Building</span>
-          <span class="carousel-item">Infrastructure as a Business</span>
-          <span class="carousel-item">Data Visualization & Dashboards</span>
-          <span class="carousel-item">Automation & Integration</span>
-          <span class="carousel-item">Custom Client Portals</span>
+      <div class="carousel-wrapper">
+        <div class="carousel-mask">
+          <div id="carousel" class="carousel-track">
+            <span class="carousel-item">Website & App Development</span>
+            <span class="carousel-item">AI Agents Building</span>
+            <span class="carousel-item">Infrastructure as a Business</span>
+            <span class="carousel-item">Data Visualization & Dashboards</span>
+            <span class="carousel-item">Automation & Integration</span>
+            <span class="carousel-item">Custom Client Portals</span>
+          </div>
         </div>
       </div>
     </section>
+
+    <script src="/src/main.js"></script>
   </body>
 </html>
 
