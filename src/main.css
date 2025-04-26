@@ -753,8 +753,10 @@
 
   .carousel-mask {
     width: 500px;
-    height: 50px;
+    height: 45px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
     position: relative;
     border: 2px solid #00FFFF;
     border-radius: 10px;
@@ -766,16 +768,21 @@
     align-items: center;
     animation: slideUp 50s infinite;
   }
+
+  #carousel {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+  }
   
   .carousel-item {
     color: #00FFFF;
     font-size: 24px;
     font-weight: bold;
-    height: 50px;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
   }
   
   @keyframes slideUp {
