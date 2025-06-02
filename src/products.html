@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--- ========================================================= ----
+          Name of Project:  Tumbletech Main Website
+          Date:             April 8, 2025
+          Project ID:       00-0000
+    ----- ========================================================= --->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumbletech</title>
+    <link rel="icon" type="image/png" href="/assets/img/002.favicon.png">
+    <link href="./main.css" rel="stylesheet">
+    <style>
+      body {
+      background: black;
+      color: #00fefb;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    nav {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #00fefb;
+      font-weight: 500;
+    }
+    .landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 90vh;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!--- Navigation Bar --->
+    <nav class="flex justify-between items-center p-6 bg-black shadow-md sticky top-0 z-50">
+      <div class="flex items-center">
+        <img src="/assets/img/001.mainlogo-b.png" alt="Tumbletech-Logo" class="h-10 mr-3">
+      </div>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="./index.html" class="text-[#00fefb] hover:opacity-80 transition-opacity">Home</a></li>
+        <li><a href="./products.html" class="text-[#00fefb] hover:opacity-80 transition-opacity">Products</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Roadmap</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">About</a></li>
+        <li><a href="#" class="text-[#00fefb] hover:opacity-80 transition-opacity">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!---- Products Page --->
+    <section class="py-12 px-6" id="cards">
+      <h1 class="text-5xl font-bold text-center mb-12">Projects</h1>
+      <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto" id="product-container">
+
+        <!--- Product 1: Lumina Verde University --->
+        <div class="product-card">
+          <div class="image-slot bg-[#0d0d0d] rounded-t-md">
+            <img src="/assets/img/004.project01.png" alt="Lumina Verde" class="object-cover w-full h-40 rounded-t-md" id="img-proj01">
+          </div>
+          <div class="p-4">
+            <h2 class="text-xl font-bold mb-2">Lumina Verde University</h2>
+            <p class="text-[#b3e5fc] text-sm">A personal Capstone project simulating a university's complete online and offline data management system. This includes freshmen entrance exam applications,
+              enrollment workflows, students and staff record handling, administrative processes, and overall school information management.</p>
+          </div>
+          </div>
+
+        <!--- Product 2: Aya's Educational Worksheets --->
+        <div class="product-card">
+          <div class="image-slot bg-[#0d0d0d] rounded-t-md">
+            <a href="https://www.ayaseducationalworksheets.com" target="_blank">
+              <img src="/assets/img/004.project02.png" alt="AEW" class="object-cover w-full h-40 rounded-t-md" id="img-proj02">
+            </a>
+          </div>
+          <div class="p-4">
+            <h2 class="text-xl font-bold mb-2">Aya's Educational Worksheets</h2> 
+            <p class="text-[#b3e5fc]">Aya's Educational Worksheets is Tumbletech's founder's advocacy and initiative aimed at uplifting the educational situation in the Philippines. It is a platform
+              offering thoughtfully designed worksheets for early learners, sparking curiousity, strengthening foundational skills, and serving as a valuable companion for parents and educators alike.
+            </p>
+        </div>
+        </div>
+
+        <!--- Product 3: Aqueous-AI --->
+        <div class="product-card">
+          <div class="image-slot bg-[#0d0d0d] rounded-t-md">
+            <img src="/assets/img/004.project03.png" alt="Aqueous-AI" class="object-cover w-full h-40 rounded-t-md" id="img-proj03">
+          </div>
+          <div class="p-4">
+            <h2 class="text-5xl font-bold mb-2">Aqueous-AI <span class="text-sm text-yellow-400">(Upcoming)</span></h2>
+            <p class="text-[#b3e5fc]">Aqueos-AI is an upcoming specialized water engineering tool designed for real estate developers, lot buyers, and sellers in Texas. It focuses on accurately sizing water tanks, wells, and associated 
+              pumping systems to support property planning, development, and compliance requirements.</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="image-slot bg-[#0d0d0d] rounded-t-md">
+            <img src="/assets/img/004.project04.png" alt="Grocery List" class="object-cover w-full h-40 rounded-t-md" id="img-proj04">
+          </div>
+          <div class="p-4">
+            <h2 class="text-5xl font-bold mb-2">ListaGrocery<span class="text-sm text-yellow-400">(Upcoming)</span></h2>
+            <p class="text-[#b3e5fc]">A simple but powerful tool aimed at helping households manage grocery shopping more efficiently through smart categorization and predictive inventory tracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
+
